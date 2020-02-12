@@ -23,8 +23,8 @@ RUN  apt-get update \
 
 ADD package.json package-lock.json /
 RUN git clone https://github.com/pa-ra-krum/Docker-OpenVidu-LoadTesting.git
-WORKDIR /OpenVidu-Load-Testing-Puppeteer
+WORKDIR /OpenVidu-Load-Testing-Puppeteer/openvidu-client-puppeteer
 RUN mkdir logs
 RUN npm install
 RUN npm install -g http-server
-ADD start-load-test.js /OpenVidu-Load-Testing-Puppeteer
+ADD start-load-test.js /OpenVidu-Load-Testing-Puppeteer/openvidu-client-puppeteer
